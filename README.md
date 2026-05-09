@@ -7,26 +7,21 @@ This project documents the setup and operation of a personal SOC lab built using
 The goal is to simulate real attack scenarios, detect threat and practice incident response, all in a safe, isolated environment.
 
 ## Lab Architecture
-```text
-┌──────────────────────────────────────────────────────────────┐
-│                    VirtualBox Network                       │
-│                      192.168.56.0/24                        │
-│                                                              │
-│   ┌─────────────────┐        ┌──────────────────────────┐    │
-│   │   Kali Linux    │ ───▶   │   Wazuh SIEM Server     │    │
-│   │   (Attacker)    │        │      Ubuntu 22.04       │    │
-│   │                 │        │      192.168.56.102     │    │
-│   └─────────────────┘        └─────────────┬────────────┘    │
-│                                             │                 │
-│                            ┌────────────────┴─────────────┐   │
-│                            │                              │   │
-│                ┌───────────▼──────────┐     ┌────────────▼──────────┐
-│                │      Windows 11      │     │    Windows Server     │
-│                │      (Endpoint)      │     │      (Endpoint)       │
-│                │    + Wazuh Agent     │     │    + Wazuh Agent      │
-│                │    + Sysmon          │     │    + Sysmon           │
-│                └──────────────────────┘     └───────────────────────┘
-│                                                              │
-└──────────────────────────────────────────────────────────────┘
+```mermaid
+flowchart TD
+
+    A[Kali Linux<br>Attacker Machine]
+
+    B[Wazuh SIEM Server<br>Ubuntu 22.04<br>192.168.56.102]
+
+    C[Windows 11<br>Endpoint<br>Sysmon + Wazuh Agent]
+
+    D[Windows Server<br>Endpoint<br>Sysmon + Wazuh Agent]
+
+    A -->|Attack Simulation| C
+    A -->|Attack Simulation| D
+
+    C -->|Logs & Alerts| B
+    D -->|Logs & Alerts| B
 ```
  
