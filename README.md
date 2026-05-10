@@ -121,8 +121,10 @@ C:\Sysmon\Sysmon64.exe -accepteula -i
 > Add to ossec.conf before </ossec_config>
 ```xml
 
-  eventchannel
-  Microsoft-Windows-Sysmon/Operational
+<localfile>
+  <log_format>eventchannel</log_format>
+  <location>Microsoft-Windows-Sysmon/Operational</location>
+</localfile>
 
 ```
 > Then restart the service:
