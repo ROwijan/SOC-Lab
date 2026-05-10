@@ -147,3 +147,17 @@ SOC-Lab/
     └── 02-targeted-scan.md
 ```
 
+## 📊 Screenshots 
+
+### 1. Wazuh Agents Active
+![Wazuh Agents](screenshots/wazuh-agents.png)
+
+### 2. Nmap Scan Results
+![Nmap Scan](screenshots/nmap-scan.png)
+
+### 3. Wazuh Dashboard with Alerts
+![Wazuh Dashboard - Windows 11](screenshots/wazuh-dashboard.png)
+![Wazuh Dashboard - Windows Server](screenshots/windows-server-alerts.png)
+
+### 4. Security Alerts - MITRE ATT&CK
+![Security Alerts](screenshots/windows11-alerts.png)
