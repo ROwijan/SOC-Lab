@@ -161,3 +161,13 @@ SOC-Lab/
 
 ### 4. Security Alerts - MITRE ATT&CK
 ![Security Alerts](screenshots/windows11-alerts.png)
+
+## 🎯 Learning Objectives 
+
+- Understand SIEM architecture and log correlation
+- Practice threat detection and alert triage
+- Simulate real world attack techniques (MITRE ATT&CK)
+- Develop incident response procedures
+- Configure and manage Windows endpoint monitoring
+- Analyze Sysmon logs for suspicious activity
+- Understand network segmentation and isolated lab environments
