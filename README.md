@@ -63,7 +63,7 @@ nmap -sV 192.168.56.0/24
 - Wazuh detected the scan and triggered alerts
 - Severity Level 12+ alerts generated
 - Sysmon detected suspicious process activity
-- MITRE ATT&CK T1055 technique identified
+- MITRE ATT&CK T1046 - Network Service Scanning identified
 
 ---
 
