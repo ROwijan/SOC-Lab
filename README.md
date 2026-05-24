@@ -154,14 +154,17 @@ Start-Service -Name WazuhSvc
 SOC-Lab/
 ├── README.md
 ├── screenshots/
-│   ├── wazuh-dashboard.png
+│   ├── wazuh-agents.png
 │   ├── nmap-scan.png
-│   └── alerts.png
-├── configs/
-│   └── ossec-conf-sysmon.xml
+│   ├── wazuh-dashboard.png
+│   ├── windows-server-alerts.png
+│   ├── windows11-alerts.png
+│   ├── brute-force-dashboard.png
+│   ├── brute-force-alerts.png
+│   └── hydra-terminal.png
 └── scenarios/
     ├── 01-nmap-scan.md
-    └── 02-targeted-scan.md
+    ├── 02-targeted-scan.md
     └── 03-brute-force.md
 ```
 
