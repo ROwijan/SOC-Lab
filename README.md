@@ -45,6 +45,7 @@ flowchart TD
 - [x] Sysmon deployed on Windows endpoints
 - [x] First attack simulated: Nmap network scan
 - [x] Alerts successfully triggered in Wazuh Dashboard
+- [x] Brute Force attack simulated and detected
 - [ ] Attack scenario documentation
 - [ ] Custom detection rules
 - [ ] Incident response playbooks
@@ -176,6 +177,15 @@ SOC-Lab/
 
 ### 4. Security Alerts - MITRE ATT&CK
 ![Security Alerts](screenshots/windows11-alerts.png)
+
+### 5. Brute Force Attack - Dashboard
+![Brute Force Dashboard](screenshots/brute-force-dashboard.png)
+
+### 6. Brute Force Alerts
+![Brute Force Alerts](screenshots/brute-force-alerts.png)
+
+### 7. Hydra Terminal
+![Hydra Terminal](screenshots/hydra-terminal.png)
 
 ## 🎯 Learning Objectives 
 
