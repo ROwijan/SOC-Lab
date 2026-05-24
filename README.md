@@ -47,9 +47,8 @@ flowchart TD
 - [x] First attack simulated: Nmap network scan
 - [x] Alerts successfully triggered in Wazuh Dashboard
 - [x] Brute Force attack simulated and detected
-- [ ] Attack scenario documentation
-- [ ] Custom detection rules
-- [ ] Incident response playbooks
+- [x] SSH remote access simulated and detected
+- [x] Attack scenario documentation
 
 ## 🔴 Attack Scenarios 
 
@@ -100,8 +99,21 @@ hydra -l Administrator -P /usr/share/wordlists/fasttrack.txt -t 4 -V ssh://192.1
 - Tactics detected: Defense Evasion, Persistence, Privilege Escalation, Initial Access
 - MITRE ATT&CK T1110 - Brute Force technique
 
-### 4. Metasploit Exploitation 
-*Coming soon*
+### 4. SSH Remote Access ✅
+**Description:** Gained remote access to Windows Server from Kali Linux using SSH credentials obtained from brute force attack.
+
+**Tool used:** SSH
+
+**Command used:**
+```bash
+ssh Administrator@192.168.56.105
+```
+
+**Result:**
+- Successfully logged into Windows Server remotely
+- Executed commands on the target machine
+- Wazuh detected Cleartext logon success
+- MITRE ATT&CK T1021.004 - Remote Services: SSH
 
 ## 🚀 Getting Started 
 
@@ -161,11 +173,17 @@ SOC-Lab/
 │   ├── windows11-alerts.png
 │   ├── brute-force-dashboard.png
 │   ├── brute-force-alerts.png
-│   └── hydra-terminal.png
-└── scenarios/
-    ├── 01-nmap-scan.md
-    ├── 02-targeted-scan.md
-    └── 03-brute-force.md
+│   ├── hydra-terminal.png
+│   ├── ssh-session.png
+│   ├── ssh-commands.png
+│   └── ssh-wazuh-alerts.png
+├── scenarios/
+│   ├── 01-nmap-scan.md
+│   ├── 02-targeted-scan.md
+│   ├── 03-brute-force.md
+│   └── 04-ssh-access.md
+└── configs/
+    └── ossec-conf-sysmon.xml
 ```
 
 ## 📊 Screenshots 
@@ -191,6 +209,15 @@ SOC-Lab/
 
 ### 7. Hydra Terminal
 ![Hydra Terminal](screenshots/hydra-terminal.png)
+
+### 8. SSH Remote Access Session
+![SSH Session](screenshots/ssh-session.png)
+
+### 9. SSH Commands on Windows Server
+![SSH Commands](screenshots/ssh-commands.png)
+
+### 10. SSH Wazuh Alerts
+![SSH Alerts](screenshots/ssh-wazuh-alerts.png)
 
 ## 🎯 Learning Objectives 
 
