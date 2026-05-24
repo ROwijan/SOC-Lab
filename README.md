@@ -18,6 +18,7 @@ flowchart TD
     C -->|Logs & Alerts| B
     D -->|Logs & Alerts| B
 ```
+![Lab Architecture](screenshots/mermaid-diagram.png)
  
 ## 🖥️ Virtual Machines 
 | VM Name | OS | Role | IP Address |
@@ -161,6 +162,7 @@ SOC-Lab/
 └── scenarios/
     ├── 01-nmap-scan.md
     └── 02-targeted-scan.md
+    └── 03-brute-force.md
 ```
 
 ## 📊 Screenshots 
