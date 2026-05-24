@@ -82,8 +82,21 @@ nmap -sS -sV -O 192.168.56.104
 
 ---
 
-### 3. Brute Force Attack 
-*Coming soon*
+### 3. Brute Force Attack - SSH ✅
+**Description:** Simulated a brute force attack from Kali targeting Windows Server 2019 SSH service.
+
+**Tool used:** Hydra
+
+**Command used:**
+```bash
+hydra -l Administrator -P /usr/share/wordlists/fasttrack.txt -t 4 -V ssh://192.168.56.105
+```
+
+**Result:**
+- 29+ Authentication failures detected
+- Wazuh triggered alerts automatically
+- Tactics detected: Defense Evasion, Persistence, Privilege Escalation, Initial Access
+- MITRE ATT&CK T1110 - Brute Force technique
 
 ### 4. Metasploit Exploitation 
 *Coming soon*
